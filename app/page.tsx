@@ -25,7 +25,14 @@ export default function HomePage() {
           <a href="/soporte">Soporte</a>
           <a href="mailto:hola@sobres-app.com">Contacto</a>
         </div>
-        <a href="#descargar" className="btn-nav">Descargar</a>
+        {/* "Entrar" va antes de "Descargar" y sin relleno: quien ya tiene cuenta
+            busca la puerta, no la descarga, y en fantasma no le compite a la
+            acción principal del sitio. Es dominio aparte (app.sobres-app.com),
+            así que es un <a> normal y no una ruta de este Next. */}
+        <div className="nav-actions">
+          <a href="https://app.sobres-app.com" className="btn-nav-ghost">Entrar</a>
+          <a href="#descargar" className="btn-nav">Descargar</a>
+        </div>
       </nav>
 
       <section className="hero">
@@ -203,6 +210,15 @@ export default function HomePage() {
           Descargar en el App Store
         </a>
         <p style={{ marginTop: 20, fontSize: 13, opacity: 0.5 }}>iOS 18 o superior requerido</p>
+
+        {/* La segunda puerta: quien no trae el iPhone a la mano —o no quiere
+            instalar nada todavía— entra desde el navegador con la misma cuenta.
+            Va aquí abajo y no en el hero para no partir en dos la decisión de
+            descargar, que sigue siendo la principal. */}
+        <p className="cta-web">
+          ¿Prefieres la computadora?{" "}
+          <a href="https://app.sobres-app.com">Entra a la app web →</a>
+        </p>
       </section>
 
       <footer>
