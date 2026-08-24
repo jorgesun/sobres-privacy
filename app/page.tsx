@@ -130,9 +130,6 @@ export default function HomePage() {
         <div className="section-head">
           <div className="section-label">La app por dentro</div>
           <h2 className="section-title">Así se ve Sobres en tu iPhone</h2>
-          <p className="section-sub">
-            Capturas reales de la versión que está hoy en el App Store. Sin maquetas.
-          </p>
         </div>
 
         <div className="shots">
